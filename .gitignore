@@ -15,7 +15,7 @@ Thumbs.db
 .classpath
 .log
 *.class
-.metedata
+.metadata
 
 # idea #
 .idea
