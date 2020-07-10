@@ -1,0 +1,16 @@
+package com.company.java.oop.cls;
+/**
+ * 类加载时,加入Metaspace内存空间比较小,可能会导致OOM(内存溢出)
+ * @author soft01
+ *
+ */
+public class TestClassObject09 {
+	public static void main(String[] args) {
+		//如何创建Object的子类?
+		//1)任意定义类
+		//2)借助字节码增强技术创建一个类(Object的子类)
+		
+		//2.借助CGLIB库中的API为Object类创建子类
+		//3.调用Object类的方法时输出方法的执行时长
+	}
+}

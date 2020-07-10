@@ -1,0 +1,6 @@
+1569721019115	Extract local variable 'openSession'
+1569729468487	Extract method 'dataSource'
+1569741705471	Copy compilation unit
+1569756161971	Delete element
+1569756165045	Delete element
+1569763796643	Extract method 'registerMapper'

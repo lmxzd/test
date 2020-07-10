@@ -1,0 +1,10 @@
+package test;
+
+public  class Test1 {
+	public static void main(String[] args) {
+		float f = 4.3f;
+		double d = 1.8;
+		System.out.println((int)(d+f));
+		System.out.println(Math.round(d));
+	}
+}

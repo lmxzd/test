@@ -1,0 +1,10 @@
+package test;
+
+public class DemoHuWei {
+	public static String reverseString(String a) {
+		
+		
+		return a;
+		
+	}
+}

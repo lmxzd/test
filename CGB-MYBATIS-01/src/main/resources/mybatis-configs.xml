@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- mybatis 核心配置 -->
+<configuration><!-- Configuration -->
+  <!-- 配置初始化环境(连接) -->
+  
+  <environments default="development">
+    <environment id="development"> <!-- Environment -->
+      <transactionManager type="JDBC"/><!-- 事务管理器JdbcTransaction -->
+      <!-- 使用mybatis自带连接池 -->
+      <dataSource type="POOLED"><!-- PooledDataSource 要先有这个,再有事务管理器 -->
+        <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url"  value="jdbc:mysql:///dbgoods?serverTimezone=GMT"/><!-- 区分大小写,时区 -->
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+  	<mapper class="com.cy.pj.goods.dao.GoodsDao"/>
+  	<mapper resource="mapper/GoodsMapper.xml"/><!-- 是在这一步和接口建立的映射,
+  	然后调方法时优先调接口的注解方法,其次调XxxMapper.xml文件中的方法 -->
+  	<!-- <mapper url="mapper/GoodsMapper.xml"/> --><!-- 这个url是什么意思,可以映射网络文件吗?不是,是映射绝对路径的 -->
+  </mappers>
+  
+  
+</configuration>

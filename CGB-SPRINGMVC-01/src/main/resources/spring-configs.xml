@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	<!-- 配置bean扫描 -->
+	<context:component-scan base-package="com.cy" />
+	<!-- 配置静态资源处理(css,js,html) -->
+	<mvc:default-servlet-handler />
+	<!-- 注册默认的bean对象 -->
+	<mvc:annotation-driven />
+	<!-- 配置视图解析器 ,也可以不配,当没有视图需要解析的时候 -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<!-- Set DI (默认找对象中的set方法) -->
+		<property name="Prefix" value="/WEB-INF/pages/" />
+		<property name="Suffix" value=".html" />
+	</bean>
+</beans>

@@ -1,0 +1,25 @@
+package test;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class TestNum {
+	public static void main(String[] args) {
+		
+	}
+	public static int num(int a) {
+		String temp= String.valueOf(a);
+		int length = temp.length();
+		List<String> list = new LinkedList<String>();
+		for (int i = 0; i < length; i++) {
+			String substring = temp.substring(i, i+1);
+			list.add(substring);
+		}
+		for (int i = 0; i < list.size(); i++) {
+			int b,c;
+			b=Integer.valueOf(list.get(i));
+			c=Integer.valueOf(list.get(list.size()-1-i));
+		}
+		return a;
+	}
+}

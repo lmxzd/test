@@ -1,0 +1,38 @@
+package com.company.java.oop.cls;
+
+import java.lang.reflect.Method;
+
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
+
+/**
+ * 	类加载时,加入Metaspace内存空间比较小,可能会导致OOM(内存溢出)
+ *
+ */
+class A{//原本增强是用继承或者组合
+	public void show() {}
+}
+public class TestClassObject09 {
+	public static void main(String[] args) {
+		//如何创建Object的子类?
+		//1)任意定义类
+		//2)借助字节码增强技术创建一个类(Object的子类)
+		
+		//2.借助CGLIB库中的API为Object类创建子类
+		Enhancer enhancer = new Enhancer();  
+		enhancer.setSuperclass(Object.class);//设置父类 
+		//设置回调
+		enhancer.setCallback(new MethodInterceptor() {
+			@Override
+			public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		});
+		UserServiceImpl userService = (UserServiceImpl)enhancer.create();
+		userService.add();
+		//3.调用Object类的方法时输出方法的执行时长
+		
+	}
+}

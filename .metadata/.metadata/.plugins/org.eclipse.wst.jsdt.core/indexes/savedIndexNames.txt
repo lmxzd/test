@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+D:\LearningSource\课程资料和源码\我的源码\workspacejavaframework3.1\workspacejavaframework\.metadata\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2824621260.index
+2767942136.index
+3038412320.index
+2062098665.index
+2723350199.index
+1933678936.index
+827661686.index
+1713394036.index
+4280877262.index

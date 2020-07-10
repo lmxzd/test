@@ -1,0 +1,12 @@
+package com.company.java.oop.cls;
+
+import net.sf.cglib.proxy.Callback;
+
+public class MyMethodInterceptor implements MethodInterceptor {
+    public Object intercept(Object obj, Method method, Object[] arg, MethodProxy proxy) throws Throwable {
+        System.out.println("Before:" + method);  
+        Object object = proxy.invokeSuper(obj, arg);
+        System.out.println("After:" + method); 
+        return object;
+    }
+}

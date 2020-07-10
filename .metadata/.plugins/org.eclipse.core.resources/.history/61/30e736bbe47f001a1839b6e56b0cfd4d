@@ -1,0 +1,8 @@
+package test;
+
+public class TestHuaWei {
+	public static void main(String[] args) {
+		String a ="abc  123  45  345  "
+		DemoHuWei.reverseString(a)
+	}
+}
