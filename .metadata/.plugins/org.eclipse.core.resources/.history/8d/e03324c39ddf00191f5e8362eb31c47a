@@ -1,9 +1,0 @@
-package com.company.java.excise;
-
-import java.util.logging.SimpleFormatter;
-
-public class A {
-	public static void main(String[] args) {
-		SimplDateFormatter simpleFormatter = new SimpleDateFormatter("yyyy/MM/dd");
-	}
-}

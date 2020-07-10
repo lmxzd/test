@@ -1,7 +1,0 @@
-package com.company.java.oop.cls;
-
-import net.sf.cglib.proxy.Callback;
-
-public class MyMethodInterceptor implements Callback {
-
-}
